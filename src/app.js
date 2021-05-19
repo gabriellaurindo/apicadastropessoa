@@ -13,9 +13,13 @@ app.use(cors());
 
 //Importar Rotas
 const index =   require('../routes/index')
+const register =   require('../routes/register-client')
+const find_clients =   require('../routes/find-clients')
 
 //Usar Rotas
 app.use('/',index)
+app.use('/',register)
+app.use('/',find_clients)
 
 //Importando Banco
 require("../config/database")

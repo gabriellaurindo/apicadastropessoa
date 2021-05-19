@@ -20,23 +20,24 @@ const clientSchema = new Schema({
     email:{
         type:String,
         require:true,
+        unique: true
     },
-    telefone:{
+    sobrenome:{
         type:String,
         require:true,
     },
-    endereco:{
+    cpf:{
         type:String,
         require:true,
-    },
-    cod:{
-        type:Number,
-        require:true,
-        default:0
+        unique: true
     },
     data_de_criacao:{
         type: Date,
         default: Date.now
+    },
+    data_nasc:{
+        type: Date,
+        require:true
     }
 })
 
